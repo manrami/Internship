@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Studio | Elite Templates</title>
+    <link rel="stylesheet" href="Day-16(2).css">
+</head>
+<body>
+    <div class="header">
+        <h1>✨ AI Resume Studio</h1>
+        <p>Select a template below. <strong>Click anywhere on the resume to edit it live!</strong></p>
+    </div>
+
+    <div class="template-selector">
+        <div class="card" onclick="selectTemplate('fresher')">
+            <div class="card-icon">🌱</div>
+            <h3>Fresher Template</h3>
+            <p>Clean & simple. Best for entry-level candidates.</p>
+        </div>
+        <div class="card" onclick="selectTemplate('professional')">
+            <div class="card-icon">💼</div>
+            <h3>Professional Template</h3>
+            <p>Classic layout. Best for corporate & experienced.</p>
+        </div>
+        <div class="card" onclick="selectTemplate('modern')">
+            <div class="card-icon">🚀</div>
+            <h3>Modern ATS</h3>
+            <p>Sleek dark-mode sidebar. Optimized for ATS.</p>
+        </div>
+    </div>
+
+    <div class="resume-display-container">
+        <div id="aiLoading" class="hidden">
+            <div class="spinner"></div>
+            <p>AI is applying your template...</p>
+        </div>
+        <!-- Note: contenteditable is true so you can type on the resume! -->
+        <div id="resumeDisplay" class="resume-display hidden" contenteditable="true" spellcheck="false">
+            <!-- Selected template will be injected here -->
+        </div>
+        <button id="downloadBtn" class="btn-download hidden" onclick="window.print()">
+            ⬇️ Download / Save as PDF
+        </button>
+    </div>
+
+    <script src="Day-16(2).js"></script>
+</body>
+</html>

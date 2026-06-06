@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Assistant</title>
+    <link rel="stylesheet" href="Day-19.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-brain"></i> AI Business Assistant
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('home')">About</a></li>
+            <li><a href="#dashboard" onclick="showSection('dashboard')" class="btn-nav">Access Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOMEPAGE SECTION -->
+    <div id="home-section" class="section active">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Supercharge Your Business with AI</h1>
+                <p>An all-in-one suite of AI-powered tools designed to automate your workflow, boost productivity, and elevate your brand.</p>
+                <button class="btn-primary" onclick="showSection('dashboard')">Launch AI Dashboard <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-robot hero-icon"></i>
+            </div>
+        </header>
+
+        <section id="services" class="services">
+            <h2>Our AI Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>AI Chatbot</h3>
+                    <p>Instant business support and FAQ handling.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Resume Builder</h3>
+                    <p>ATS-friendly professional resume generation.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Invoice Generator</h3>
+                    <p>Automated customer billing and calculations.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hashtag"></i>
+                    <h3>Caption Generator</h3>
+                    <p>Viral marketing and social media content creation.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- DASHBOARD SECTION -->
+    <div id="dashboard-section" class="section hidden">
+        <div class="dashboard-header">
+            <h2>Welcome to Your AI Workspace</h2>
+            <p>Select a module below to start automating your tasks.</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- Link to previous files -->
+            <a href="../Day-15/Day-15(2).html" class="dash-card">
+                <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
+                <h3>AI Chatbot</h3>
+                <p>Launch intelligent virtual assistant</p>
+            </a>
+            
+            <a href="../Day-16/Day-16(2).html" class="dash-card">
+                <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
+                <h3>Resume Builder</h3>
+                <p>Launch ATS template studio</p>
+            </a>
+            
+            <a href="../Day-18/Day-18(1).html" class="dash-card">
+                <div class="icon-wrapper"><i class="fas fa-file-invoice"></i></div>
+                <h3>Invoice Generator</h3>
+                <p>Launch enterprise billing engine</p>
+            </a>
+            
+            <a href="../Day-18/Day-18(2).html" class="dash-card">
+                <div class="icon-wrapper"><i class="fas fa-bullhorn"></i></div>
+                <h3>Caption Generator</h3>
+                <p>Launch marketing nexus</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="Day-19.js"></script>
+</body>
+</html>

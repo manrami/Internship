@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Enterprise Billing Engine</title>
+    <link rel="stylesheet" href="Day-18(1).css">
+</head>
+<body>
+    <div class="header">
+        <h1>💼 AI Enterprise Billing Engine</h1>
+        <p>Automated precision invoicing powered by advanced logic.</p>
+    </div>
+
+    <div class="container">
+        <div class="form-card">
+            <h2><span class="icon">📝</span> Create New Invoice</h2>
+            
+            <div class="input-group">
+                <label>Client Details</label>
+                <input type="text" id="customer" placeholder="Enter Customer or Company Name">
+            </div>
+            
+            <div class="input-group">
+                <label>Product or Service</label>
+                <input type="text" id="product" placeholder="What are you billing for?">
+            </div>
+            
+            <div class="row">
+                <div class="input-group">
+                    <label>Quantity</label>
+                    <input type="number" id="quantity" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label>Price Per Unit (₹)</label>
+                    <input type="number" id="price" placeholder="₹ 0.00">
+                </div>
+            </div>
+            
+            <button class="btn-generate" onclick="generateInvoice()">
+                ⚡ Process & Generate Invoice
+            </button>
+        </div>
+
+        <div id="previewCard" class="preview-card hidden">
+            <div id="aiLoading" class="hidden">
+                <div class="spinner"></div>
+                <p>Calculating taxes and formatting invoice...</p>
+            </div>
+            
+            <div id="invoice" class="invoice-paper hidden">
+                <!-- Invoice generated dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="Day-18(1).js"></script>
+</body>
+</html>
