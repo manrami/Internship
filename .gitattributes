@@ -1,0 +1,5 @@
+Report.docx linguist-vendored
+~$Report.docx linguist-vendored
+*.pkl linguist-vendored
+*.png linguist-vendored
+__pycache__/* linguist-vendored
