@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Business Assistant - A unified AI-powered platform featuring Chatbot, Resume Builder, Invoice Generator, and Caption Generator.">
+    <title>AI Business Assistant | Day 21 - Final Project</title>
+    <link rel="stylesheet" href="Day-21.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <div class="brand-icon"><i class="fas fa-robot"></i></div>
+            <span class="brand-name">AI<span class="brand-accent">Biz</span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active-link">Home</a></li>
+            <li><a href="#chatbot" class="nav-link">Chatbot</a></li>
+            <li><a href="#resume" class="nav-link">Resume</a></li>
+            <li><a href="#invoice" class="nav-link">Invoice</a></li>
+            <li><a href="#caption" class="nav-link">Captions</a></li>
+            <li><a href="#about" class="nav-link btn-nav">About</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-sparkles"></i> Final Internship Project · Day 21</div>
+            <h1 class="hero-title">
+                <span class="title-line">AI Business</span>
+                <span class="title-line gradient-text">Assistant</span>
+            </h1>
+            <p class="hero-desc">A unified AI-powered platform that automates your business tasks — chat intelligently, build resumes, generate invoices, and create viral captions — all in one place.</p>
+            <div class="hero-ctas">
+                <a href="#chatbot" class="btn-primary"><i class="fas fa-rocket"></i> Launch Tools</a>
+                <a href="#about" class="btn-ghost"><i class="fas fa-info-circle"></i> Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">AI Modules</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Client-Side</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">21</span><span class="stat-label">Days Built</span></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-ring ring-1">
+                <div class="orbit-icon" style="--angle:0deg"><i class="fas fa-comments"></i></div>
+            </div>
+            <div class="orbit-ring ring-2">
+                <div class="orbit-icon" style="--angle:90deg"><i class="fas fa-file-alt"></i></div>
+            </div>
+            <div class="orbit-ring ring-3">
+                <div class="orbit-icon" style="--angle:180deg"><i class="fas fa-file-invoice-dollar"></i></div>
+            </div>
+            <div class="orbit-ring ring-4">
+                <div class="orbit-icon" style="--angle:270deg"><i class="fas fa-magic"></i></div>
+            </div>
+            <div class="core-orb">
+                <i class="fas fa-brain"></i>
+                <span>AI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE CARDS -->
+    <section class="modules-overview">
+        <div class="container">
+            <h2 class="section-title">Integrated <span class="gradient-text">AI Modules</span></h2>
+            <p class="section-sub">Click any module to jump directly to the tool</p>
+            <div class="modules-grid">
+                <a href="#chatbot" class="module-card" id="card-chatbot">
+                    <div class="module-icon chatbot-icon"><i class="fas fa-comments"></i></div>
+                    <h3>AI Chatbot</h3>
+                    <p>Intelligent conversational AI providing instant answers, business advice, and automated support.</p>
+                    <div class="module-tag">Smart Responses</div>
+                </a>
+                <a href="#resume" class="module-card" id="card-resume">
+                    <div class="module-icon resume-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Resume Builder</h3>
+                    <p>Generate professional, ATS-optimized resumes automatically from your inputs in seconds.</p>
+                    <div class="module-tag">PDF Ready</div>
+                </a>
+                <a href="#invoice" class="module-card" id="card-invoice">
+                    <div class="module-icon invoice-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Invoice Generator</h3>
+                    <p>Create professional invoices with auto-calculated tax, totals, and print-ready formatting.</p>
+                    <div class="module-tag">Auto Calculate</div>
+                </a>
+                <a href="#caption" class="module-card" id="card-caption">
+                    <div class="module-icon caption-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3>Caption Generator</h3>
+                    <p>Generate viral marketing captions and social media content for any product or brand.</p>
+                    <div class="module-tag">Multi-Platform</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODULE 1: AI CHATBOT ===== -->
+    <section id="chatbot" class="tool-section chatbot-section">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-badge chatbot-badge"><i class="fas fa-comments"></i> Module 01</div>
+                <h2 class="section-title">AI <span class="gradient-text">Chatbot</span></h2>
+                <p class="section-sub">Powered by intelligent pattern recognition — ask anything about business, tech, or career!</p>
+            </div>
+            <div class="chatbot-wrapper">
+                <div class="chat-window" id="chatWindow">
+                    <div class="chat-welcome">
+                        <div class="welcome-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="welcome-bubble">
+                            <p>Hello! 👋 I'm your <strong>AI Business Assistant</strong>. Ask me anything — business tips, career advice, tech help, or just say hi!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggestion-chip" onclick="sendSuggestion('How can AI help my business?')">💡 AI in Business</button>
+                    <button class="suggestion-chip" onclick="sendSuggestion('Give me productivity tips')">⚡ Productivity Tips</button>
+                    <button class="suggestion-chip" onclick="sendSuggestion('How to write a great resume?')">📄 Resume Tips</button>
+                    <button class="suggestion-chip" onclick="sendSuggestion('What is digital marketing?')">📣 Marketing</button>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Type your message here..." autocomplete="off">
+                    <button class="chat-send-btn" id="chatSendBtn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODULE 2: RESUME BUILDER ===== -->
+    <section id="resume" class="tool-section resume-section">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-badge resume-badge"><i class="fas fa-id-card"></i> Module 02</div>
+                <h2 class="section-title">Resume <span class="gradient-text">Builder</span></h2>
+                <p class="section-sub">Fill in the form and generate a professional, print-ready resume instantly</p>
+            </div>
+            <div class="resume-layout">
+                <div class="resume-form glass-card">
+                    <h3 class="form-title"><i class="fas fa-edit"></i> Your Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>Full Name</label>
+                            <input type="text" id="r-name" placeholder="e.g. Manrami Sharma" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" id="r-title" placeholder="e.g. AI Engineer" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="r-email" placeholder="you@email.com" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" id="r-phone" placeholder="+91 98765 43210" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="r-location" placeholder="City, Country" class="form-input">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Professional Summary</label>
+                            <textarea id="r-summary" class="form-input form-textarea" placeholder="A brief professional summary about yourself..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Skills (comma-separated)</label>
+                            <input type="text" id="r-skills" placeholder="Python, AI, JavaScript, Machine Learning" class="form-input">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Work Experience</label>
+                            <textarea id="r-experience" class="form-input form-textarea" placeholder="Company Name | Role | Duration&#10;- Key achievement or responsibility&#10;- Another achievement"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Education</label>
+                            <input type="text" id="r-education" placeholder="B.Tech Computer Science | University Name | 2020-2024" class="form-input">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-primary" onclick="generateResume()"><i class="fas fa-magic"></i> Generate Resume</button>
+                        <button class="btn-ghost" onclick="clearResume()"><i class="fas fa-trash"></i> Clear</button>
+                    </div>
+                </div>
+                <div class="resume-preview glass-card" id="resumePreview">
+                    <div class="preview-placeholder" id="resumePlaceholder">
+                        <i class="fas fa-id-card"></i>
+                        <p>Your resume preview will appear here</p>
+                    </div>
+                    <div id="resumeOutput" style="display:none;"></div>
+                    <button class="btn-print" id="resumePrintBtn" onclick="printResume()" style="display:none;">
+                        <i class="fas fa-print"></i> Print Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODULE 3: INVOICE GENERATOR ===== -->
+    <section id="invoice" class="tool-section invoice-section">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-badge invoice-badge"><i class="fas fa-file-invoice-dollar"></i> Module 03</div>
+                <h2 class="section-title">Invoice <span class="gradient-text">Generator</span></h2>
+                <p class="section-sub">Create professional invoices with auto-tax calculation and print functionality</p>
+            </div>
+            <div class="invoice-layout">
+                <div class="invoice-form glass-card">
+                    <h3 class="form-title"><i class="fas fa-building"></i> Business & Client Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Your Business Name</label>
+                            <input type="text" id="inv-biz" placeholder="Your Company Ltd." class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Invoice Number</label>
+                            <input type="text" id="inv-num" placeholder="INV-2026-001" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Client Name</label>
+                            <input type="text" id="inv-client" placeholder="Client Name" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Invoice Date</label>
+                            <input type="date" id="inv-date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Due Date</label>
+                            <input type="date" id="inv-due" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Tax Rate (%)</label>
+                            <input type="number" id="inv-tax" placeholder="18" value="18" class="form-input" oninput="recalcInvoice()">
+                        </div>
+                    </div>
+                    <h3 class="form-title" style="margin-top:24px;"><i class="fas fa-list"></i> Line Items</h3>
+                    <div class="items-table-wrapper">
+                        <table class="items-table" id="itemsTable">
+                            <thead>
+                                <tr><th>Description</th><th>Qty</th><th>Rate (₹)</th><th>Amount</th><th></th></tr>
+                            </thead>
+                            <tbody id="itemsBody">
+                                <tr>
+                                    <td><input type="text" class="item-input item-desc" placeholder="Service / Product"></td>
+                                    <td><input type="number" class="item-input item-qty" value="1" oninput="recalcInvoice()"></td>
+                                    <td><input type="number" class="item-input item-rate" placeholder="0.00" oninput="recalcInvoice()"></td>
+                                    <td class="item-amount">₹0.00</td>
+                                    <td><button class="btn-remove-row" onclick="removeRow(this)"><i class="fas fa-times"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn-add-row" onclick="addRow()"><i class="fas fa-plus"></i> Add Item</button>
+                    <div class="totals-box">
+                        <div class="total-row"><span>Subtotal:</span><span id="subtotal">₹0.00</span></div>
+                        <div class="total-row"><span>Tax (<span id="taxLabel">18</span>%):</span><span id="taxAmount">₹0.00</span></div>
+                        <div class="total-row grand-total"><span>Total:</span><span id="grandTotal">₹0.00</span></div>
+                    </div>
+                    <button class="btn-primary" style="width:100%;" onclick="generateInvoice()"><i class="fas fa-file-pdf"></i> Generate Invoice</button>
+                </div>
+                <div class="invoice-preview glass-card" id="invoicePreviewCard">
+                    <div class="preview-placeholder" id="invoicePlaceholder">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <p>Your invoice preview will appear here</p>
+                    </div>
+                    <div id="invoiceOutput" style="display:none;"></div>
+                    <button class="btn-print" id="invoicePrintBtn" onclick="printInvoice()" style="display:none;">
+                        <i class="fas fa-print"></i> Print Invoice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODULE 4: CAPTION GENERATOR ===== -->
+    <section id="caption" class="tool-section caption-section">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-badge caption-badge"><i class="fas fa-hashtag"></i> Module 04</div>
+                <h2 class="section-title">Caption <span class="gradient-text">Generator</span></h2>
+                <p class="section-sub">Create viral, platform-optimized marketing captions powered by AI logic</p>
+            </div>
+            <div class="caption-layout">
+                <div class="caption-form glass-card">
+                    <h3 class="form-title"><i class="fas fa-pen-nib"></i> Caption Details</h3>
+                    <div class="form-group" style="margin-bottom:18px;">
+                        <label>Product / Brand Name</label>
+                        <input type="text" id="cap-product" placeholder="e.g. NovaBrew Coffee" class="form-input">
+                    </div>
+                    <div class="form-group" style="margin-bottom:18px;">
+                        <label>Key Benefit / USP</label>
+                        <input type="text" id="cap-usp" placeholder="e.g. Premium organic, boosts focus" class="form-input">
+                    </div>
+                    <div class="form-group" style="margin-bottom:18px;">
+                        <label>Target Audience</label>
+                        <input type="text" id="cap-audience" placeholder="e.g. Young professionals, students" class="form-input">
+                    </div>
+                    <div class="form-group" style="margin-bottom:18px;">
+                        <label>Platform</label>
+                        <select id="cap-platform" class="form-input form-select">
+                            <option value="instagram">📸 Instagram</option>
+                            <option value="twitter">🐦 Twitter / X</option>
+                            <option value="linkedin">💼 LinkedIn</option>
+                            <option value="facebook">👥 Facebook</option>
+                            <option value="all">🌐 All Platforms</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:24px;">
+                        <label>Tone / Style</label>
+                        <div class="tone-chips">
+                            <button class="tone-chip active" data-tone="energetic">⚡ Energetic</button>
+                            <button class="tone-chip" data-tone="professional">💼 Professional</button>
+                            <button class="tone-chip" data-tone="funny">😄 Funny</button>
+                            <button class="tone-chip" data-tone="inspirational">🌟 Inspirational</button>
+                            <button class="tone-chip" data-tone="luxury">👑 Luxury</button>
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width:100%;" onclick="generateCaptions()">
+                        <i class="fas fa-magic"></i> Generate Captions
+                    </button>
+                </div>
+                <div class="caption-results glass-card" id="captionResults">
+                    <div class="preview-placeholder" id="captionPlaceholder">
+                        <i class="fas fa-hashtag"></i>
+                        <p>Your AI-generated captions will appear here</p>
+                    </div>
+                    <div id="captionOutput" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / ARCHITECTURE -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="tool-header">
+                <h2 class="section-title">Project <span class="gradient-text">Architecture</span></h2>
+                <p class="section-sub">How the AI Business Assistant is structured and built</p>
+            </div>
+            <div class="arch-grid">
+                <div class="arch-card glass-card">
+                    <h3><i class="fas fa-sitemap"></i> System Workflow</h3>
+                    <div class="workflow">
+                        <div class="wf-step">👤 User Input</div>
+                        <div class="wf-arrow">↓</div>
+                        <div class="wf-step highlight">🧠 AI Business Assistant</div>
+                        <div class="wf-arrow">↓</div>
+                        <div class="wf-modules">
+                            <div class="wf-mod chatbot-mod">💬 Chatbot</div>
+                            <div class="wf-mod resume-mod">📄 Resume</div>
+                            <div class="wf-mod invoice-mod">🧾 Invoice</div>
+                            <div class="wf-mod caption-mod">📣 Caption</div>
+                        </div>
+                        <div class="wf-arrow">↓</div>
+                        <div class="wf-step">⚙️ AI Processing</div>
+                        <div class="wf-arrow">↓</div>
+                        <div class="wf-step highlight">✅ Generate & Display Output</div>
+                    </div>
+                </div>
+                <div class="arch-card glass-card">
+                    <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+                    <div class="tech-list">
+                        <div class="tech-item"><span class="tech-badge frontend">Frontend</span><span>HTML5 · CSS3 · JavaScript ES6+</span></div>
+                        <div class="tech-item"><span class="tech-badge design">Design</span><span>Glassmorphism · Animations · Gradients</span></div>
+                        <div class="tech-item"><span class="tech-badge ai">AI Logic</span><span>NLP Patterns · Keyword Engine · Smart Algorithms</span></div>
+                        <div class="tech-item"><span class="tech-badge tools">Tools</span><span>VS Code · GitHub · ChatGPT</span></div>
+                        <div class="tech-item"><span class="tech-badge fonts">Typography</span><span>Google Fonts (Outfit) · Font Awesome 6</span></div>
+                    </div>
+                    <h3 style="margin-top:28px;"><i class="fas fa-check-circle"></i> Features Delivered</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> AI Chatbot with smart NLP</li>
+                        <li><i class="fas fa-check"></i> Resume Builder with print output</li>
+                        <li><i class="fas fa-check"></i> Invoice Generator with auto-tax</li>
+                        <li><i class="fas fa-check"></i> Multi-platform Caption Generator</li>
+                        <li><i class="fas fa-check"></i> Responsive & animated UI</li>
+                        <li><i class="fas fa-check"></i> 100% client-side, no backend needed</li>
+                    </ul>
+                </div>
+                <div class="arch-card glass-card deployment-card">
+                    <h3><i class="fas fa-rocket"></i> Deployment Workflow</h3>
+                    <div class="deploy-steps">
+                        <div class="deploy-step"><div class="step-num">1</div><div class="step-text"><strong>Development</strong><br>VS Code + Git</div></div>
+                        <div class="deploy-arrow">→</div>
+                        <div class="deploy-step"><div class="step-num">2</div><div class="step-text"><strong>Testing</strong><br>Browser validation</div></div>
+                        <div class="deploy-arrow">→</div>
+                        <div class="deploy-step"><div class="step-num">3</div><div class="step-text"><strong>GitHub</strong><br>Source code upload</div></div>
+                        <div class="deploy-arrow">→</div>
+                        <div class="deploy-step"><div class="step-num">4</div><div class="step-text"><strong>Deploy</strong><br>Netlify / Vercel</div></div>
+                        <div class="deploy-arrow">→</div>
+                        <div class="deploy-step"><div class="step-num">5</div><div class="step-text"><strong>Live</strong><br>Public URL 🌐</div></div>
+                    </div>
+                    <div class="deploy-platforms">
+                        <div class="platform-badge"><i class="fab fa-github"></i> GitHub Pages</div>
+                        <div class="platform-badge"><i class="fas fa-cloud"></i> Netlify</div>
+                        <div class="platform-badge"><i class="fas fa-bolt"></i> Vercel</div>
+                        <div class="platform-badge"><i class="fas fa-server"></i> Render</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <span>AI<span class="brand-accent">Biz</span> Assistant</span>
+            </div>
+            <p class="footer-tagline">Day 21 — Final Internship Project · Techno Guide 2026 🚀</p>
+            <p class="footer-sub">Built with HTML · CSS · JavaScript · AI Logic · ❤️</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#chatbot">Chatbot</a>
+                <a href="#resume">Resume</a>
+                <a href="#invoice">Invoice</a>
+                <a href="#caption">Captions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Day-21.js"></script>
+</body>
+</html>
